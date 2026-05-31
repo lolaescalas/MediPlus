@@ -1,0 +1,66 @@
+# ─── SECRETOS (NUNCA commitear) ───────────────────────────────
+.env
+*.env
+!.env.example
+
+# ─── PYTHON ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.log
+
+# ─── C# / .NET ────────────────────────────────────────────────
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+[Pp]ublish/
+[Pp]ackages/
+*.nupkg
+*.snupkg
+*.nuget/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.msm
+*.msi
+*.appx
+
+# ─── VISUAL STUDIO ────────────────────────────────────────────
+.vs/
+*.rsuser
+*.MigrationBackup
+*.VC.db
+*.VC.opendb
+
+# ─── OS ───────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ─── EDITORES ─────────────────────────────────────────────────
+.vscode/
+*.swp
+*.swo
+*~

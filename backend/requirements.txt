@@ -1,0 +1,17 @@
+# ── API ───────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# ── MongoDB Atlas ─────────────────────────────────────────────
+pymongo[srv]==4.10.1        # Driver síncrono (+ soporte Atlas SRV)
+dnspython==2.7.0            # Requerido para URIs mongodb+srv://
+
+# ── Neo4j Aura ────────────────────────────────────────────────
+neo4j==5.27.0               # Driver oficial Neo4j
+
+# ── Validación y configuración ────────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.6.1    # Lectura de .env con BaseSettings
+
+# ── Utilidades ────────────────────────────────────────────────
+python-dotenv==1.0.1

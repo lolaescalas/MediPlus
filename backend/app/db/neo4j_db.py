@@ -60,9 +60,9 @@ def ping_neo4j() -> dict:
         driver = get_driver()
         driver.verify_connectivity()
         with get_session() as session:
-            result = session.run("CALL dbms.components() YIELD name, versions RETURN name, versions")
+            result = session.run("CALL dbms.components() YIELD name, versions WHERE name = 'Neo4j Kernel' RETURN versions[0] AS version")
             record = result.single()
-            version = record["versions"][0] if record else "desconocida"
+            version = record["version"] if record else "desconocida"
         return {"status": "ok", "version": version}
     except AuthError:
         return {"status": "error", "detail": "Credenciales inválidas (usuario o contraseña)"}

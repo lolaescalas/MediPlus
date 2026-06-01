@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+#Lee el .env 
 
 class Settings(BaseSettings):
     # MongoDB Atlas
@@ -10,10 +11,6 @@ class Settings(BaseSettings):
     neo4j_uri: str
     neo4j_user: str
     neo4j_password: str
-
-    # API
-    api_host: str = "localhost"
-    api_port: int = 8000
 
     model_config = SettingsConfigDict(
         env_file=".env",

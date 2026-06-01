@@ -32,30 +32,21 @@ def test_neo4j_connection():
 
 
 if __name__ == "__main__":
-    print("=" * 50)
     print("  Test de conexiones")
-    print("=" * 50)
 
     mongo_ok = False
     neo4j_ok = False
 
     try:
         test_mongo_connection()
-        print("  ✅ MongoDB Atlas: OK")
+        print(" MongoDB Atlas: OK")
         mongo_ok = True
     except Exception as e:
-        print(f"  ❌ MongoDB Atlas: {e}")
+        print(f" MongoDB Atlas: {e}")
 
     try:
         test_neo4j_connection()
-        print("  ✅ Neo4j Aura: OK")
+        print(" Neo4j Aura: OK")
         neo4j_ok = True
     except Exception as e:
-        print(f"  ❌ Neo4j Aura: {e}")
-
-    print("=" * 50)
-    if mongo_ok and neo4j_ok:
-        print("  Todo OK — podés levantar la API con uvicorn")
-    else:
-        print("  Revisá tu archivo .env y las credenciales")
-    print("=" * 50)
+        print(f" Neo4j Aura: {e}")
